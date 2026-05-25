@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Worldstar';
+  src: url('/fonts/Worldstar.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Switzer';
+  src: url('/fonts/Switzer-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary:     #7C5F76;
+  --color-neutral:     #C4C9CF;
+  --color-background:  #F4F4FA;
+  --color-surface:     #FFFFFF;
+  --color-text:        #1E1E1E;
+  --color-muted:       #57535F;
+  --color-accent:      #ADA9C9;
+  --font-worldstar:    'Worldstar', Georgia, serif;
+  --font-switzer:      'Switzer', system-ui, sans-serif;
+  --radius-card:       12px;
+  --radius-button:     8px;
+  --radius-pill:       999px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: #F4F4FA;
+  color: #1E1E1E;
+  font-family: 'Switzer', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
