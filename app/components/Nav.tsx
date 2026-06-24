@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-16 py-6 bg-background">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-20 py-10 bg-background">
 
       <Link href="/" className="ml-6">
         <img
           src="/ce-logo.svg"
           alt="ce Logo"
-          className="w-8 h-auto"
+          className="w-6 h-auto"
         />
       </Link>
 
@@ -32,7 +32,7 @@ export default function Nav() {
           href="/resume.pdf"
           target="_blank"
           rel="noreferrer"
-          className="font-switzer text-sm px-6 py-3 bg-primary text-white rounded-xl"
+          className="font-switzer text-sm px-8 py-4 bg-primary text-white rounded-xl"
         >
           Resume
         </a>
