@@ -1,19 +1,12 @@
 export default function Footer() {
   return (
-    <footer className="px-12 py-10 bg-muted/10 border-t border-neutral/30">
-      <div className="flex items-center justify-between">
-
-        <span className="font-worldstar text-xl text-text">Ce</span>
-
-        <span className="font-switzer text-sm text-muted">
-          celineeloise@email.com · LinkedIn · GitHub
-        </span>
-
-        <span className="font-switzer text-xs text-muted/60">
-          © 2026 Celine Eloise
-        </span>
-
-      </div>
+    <footer className="px-10 py-8 flex items-center justify-between border-t border-neutral/20">
+      <span className="font-switzer text-xs text-muted/70">
+        © July 2026 Celine Eloise Wang
+      </span>
+      <span className="font-switzer text-xs text-muted/70">
+        Available for work | Perth, WA
+      </span>
     </footer>
   )
 }

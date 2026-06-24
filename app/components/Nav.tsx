@@ -8,7 +8,7 @@ export default function Nav() {
       <Link href="/" className="ml-6">
         <img
           src="/ce-logo.svg"
-          alt="ce Logo"
+          alt="Ce Logo"
           className="w-6 h-auto"
         />
       </Link>
@@ -16,14 +16,14 @@ export default function Nav() {
       <div className="flex items-center gap-10">
         <Link
           href="/about"
-          className="font-switzer text-sm text-muted hover:text-text"
+          className="font-switzer text-sm text-muted hover:text-text transition-colors"
         >
           About
         </Link>
 
         <Link
           href="/collection"
-          className="font-switzer text-sm text-muted hover:text-text"
+          className="font-switzer text-sm text-muted hover:text-text transition-colors"
         >
           Collection
         </Link>
@@ -32,11 +32,12 @@ export default function Nav() {
           href="/resume.pdf"
           target="_blank"
           rel="noreferrer"
-          className="font-switzer text-sm px-8 py-4 bg-primary text-white rounded-xl"
+          className="font-switzer text-sm px-8 py-4 bg-primary text-white rounded-xl hover:opacity-90 transition-opacity"
         >
           Resume
         </a>
       </div>
+
     </nav>
   )
 }

@@ -1,81 +1,75 @@
 import Link from 'next/link'
 
-const projects = [
+const featured = [
   {
     slug: 'mooring-tension',
-    title: 'Mooring Tension System',
-    description: 'Real-time predictive safety system integrating weather APIs and dynamic tension modeling — BHP Hackathon · 3rd Place',
-    tags: ['Python', 'API', 'Full-Stack'],
-    year: '2025',
+    title: 'Real Time Mooring Tension Optimization System',
+    achievement: 'BHP Hackathon 3rd Place 2025',
+    tags: ['Full Stack', 'API'],
   },
   {
     slug: 'workforce-analytics',
-    title: 'Workforce Analytics',
-    description: 'Multidimensional data analysis identifying patterns driving employee turnover — UBC BOLT Semifinalist',
-    tags: ['Data Analysis', 'Visualization'],
-    year: '2026',
+    title: 'Workforce Data Analytics',
+    achievement: 'UBC BOLT Semifinalist 2026',
+    tags: ['Python', 'Data Viz'],
   },
   {
     slug: 'sillykitty',
     title: 'SillyKitty AI Companion',
-    description: 'Interactive desktop pet with state-driven behaviors and AI personality system — SFU SillyHacks',
-    tags: ['Electron', 'JavaScript', 'AI'],
-    year: '2026',
+    achievement: 'SFU SillyHacks 2026',
+    tags: ['Electron', 'JavaScript'],
+  },
+  {
+    slug: 'ru-okay',
+    title: 'R U Okay?',
+    achievement: 'cmd-f UBC Hackathon 2026',
+    tags: ['Full Stack', 'AI'],
   },
 ]
 
 export default function Projects() {
   return (
-    <section id="projects" className="px-12 py-24">
+    <section className="px-10 py-20 border-t border-neutral/20">
 
-      <h2 className="font-worldstar text-5xl text-text mb-12">
+      <h2 className="font-worldstar text-[clamp(36px,4vw,56px)] text-text mb-12">
         My Projects
       </h2>
 
-      <div className="grid grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <Link
-            key={project.slug}
-            href={`/work/${project.slug}`}
-            className="group bg-surface border border-neutral/40 rounded-card p-6 flex flex-col gap-4 hover:border-primary transition-colors"
-          >
-            <div className="w-full h-52 bg-placeholder rounded-lg flex items-center justify-center">
-              <span className="font-switzer text-xs text-primary/60">image coming soon</span>
-            </div>
+      {/* 2×2 grid */}
+      <div className="grid grid-cols-2 gap-x-8 gap-y-12">
+        {featured.map((p) => (
+          <Link key={p.slug} href={`/work/${p.slug}`} className="group flex flex-col gap-4">
 
-            <div className="flex items-start justify-between">
-              <h3 className="font-worldstar text-xl text-text leading-tight">
-                {project.title}
+            {/* Image placeholder */}
+            <div className="w-full aspect-[4/3] bg-neutral/30 rounded-xl overflow-hidden group-hover:opacity-90 transition-opacity" />
+
+            {/* Text */}
+            <div>
+              <h3 className="font-worldstar text-xl text-text leading-tight mb-2">
+                {p.title}
               </h3>
-              <span className="font-switzer text-xs text-muted shrink-0 ml-2 mt-1">
-                {project.year}
-              </span>
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="font-switzer text-xs text-muted">{p.achievement}</span>
+                <span className="text-neutral/60 text-xs">|</span>
+                {p.tags.map(tag => (
+                  <span key={tag} className="font-switzer text-xs px-2.5 py-0.5 border border-neutral/50 text-muted rounded-full">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            <p className="font-switzer text-sm text-muted leading-relaxed">
-              {project.description}
-            </p>
-
-            <div className="flex flex-wrap gap-2 mt-auto">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="font-switzer text-xs px-3 py-1 bg-accent/20 text-primary rounded-pill"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
           </Link>
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      {/* CTA */}
+      <div className="mt-16">
         <Link
           href="/collection"
-          className="font-switzer text-sm text-primary border border-primary px-6 py-3 rounded-button hover:bg-primary hover:text-background transition-colors"
+          className="font-switzer text-sm px-6 py-3 bg-primary text-background rounded-button hover:opacity-90 transition-opacity inline-flex items-center gap-2"
         >
-          View my Collection
+          More of My Collection —
         </Link>
       </div>
 
