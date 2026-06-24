@@ -3,13 +3,13 @@ import Link from 'next/link'
 
 export default function Nav() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-20 py-8 bg-background">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-16 py-6 bg-background">
 
-      <Link href="/">
+      <Link href="/" className="ml-6">
         <img
           src="/ce-logo.svg"
-          alt="CE Logo"
-          className="w-10 h-auto"
+          alt="ce Logo"
+          className="w-8 h-auto"
         />
       </Link>
 
